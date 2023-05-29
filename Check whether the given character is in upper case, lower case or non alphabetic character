@@ -1,0 +1,104 @@
+1.Check whether the given character is in upper case, lower case or non alphabetic character
+
+Approach 1: The key to solving this problem lies in the ASCII value of a character. It is the simplest way to find out about a character. This problem is solved with the help 
+of the following detail: 
+
+=> Capital letter Alphabets (A-Z) lie in the range 65-91 of the ASCII value
+=> Small letter Alphabets (a-z) lie in the range 97-122 of the ASCII value
+=> Any other ASCII value is a non-alphabetic character.
+  
+Code:
+void check(char ch)
+{
+    if (ch >= 'A' && ch <= 'Z')
+        cout << ch << " is an UpperCase character\n";
+    else if (ch >= 'a' && ch <= 'z')
+        cout << ch << " is an LowerCase character\n";
+    else
+        cout << ch << " is not an alphabetic character\n";
+}
+
+
+Approach 2: Using the inbuilt library
+Code:
+void check(char ch)
+{
+    if (isupper(ch))
+        cout << ch << " is an upperCase character\n";
+ 
+    else if (islower(ch))
+        cout << ch << " is a lowerCase character\n";
+ 
+    else
+        cout << ch << " is not an alphabetic character\n";
+}
+
+Approach 3: 
+This implementation uses a switch statement to check the value of the character. If it is an uppercase letter, it will print that it is an uppercase letter. 
+If it is a lowercase letter, it will print that it is a lowercase letter. Otherwise, it will print that it is not an alphabetic character.
+Code:
+void check(char ch)
+{
+    switch(ch)
+    {
+        case 'A':
+        case 'B':
+        case 'C':
+        case 'D':
+        case 'E':
+        case 'F':
+        case 'G':
+        case 'H':
+        case 'I':
+        case 'J':
+        case 'K':
+        case 'L':
+        case 'M':
+        case 'N':
+        case 'O':
+        case 'P':
+        case 'Q':
+        case 'R':
+        case 'S':
+        case 'T':
+        case 'U':
+        case 'V':
+        case 'W':
+        case 'X':
+        case 'Y':
+        case 'Z':
+            cout << ch << " is an UpperCase character\n";
+            break;
+        case 'a':
+        case 'b':
+        case 'c':
+        case 'd':
+        case 'e':
+        case 'f':
+        case 'g':
+        case 'h':
+        case 'i':
+        case 'j':
+        case 'k':
+        case 'l':
+        case 'm':
+        case 'n':
+        case 'o':
+        case 'p':
+        case 'q':
+        case 'r':
+        case 's':
+        case 't':
+        case 'u':
+        case 'v':
+        case 'w':
+        case 'x':
+        case 'y':
+        case 'z':
+            cout << ch << " is a LowerCase character\n";
+            break;            
+        default:
+            cout << ch << " is not an alphabetic character\n";
+            break;
+    }
+}
